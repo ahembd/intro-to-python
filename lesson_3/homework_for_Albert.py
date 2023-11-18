@@ -10,7 +10,7 @@
 # Example Input: "Alice"
 # Example Output: "Hello, Alice!"
 name = input("Enter your name: ")
-print(f"{name}")
+print(f"{name.title()}")
 
 # ---------------------------------------------------------------------
 # Exercise 2: Greeting with User's Favorite Activity
@@ -20,9 +20,9 @@ print(f"{name}")
 # "Hello, [name]! Enjoy [activity]!"
 
 # Example Input:
-# Name: Emily
-# Favorite Activity: hiking
-# Example Output: "Hello, Emily! Enjoy hiking!"
+name = input("What is your name?")
+favorite_activity = input("What is your favorite activity?")
+print(f"Hello, {name.title()}! Enjoy {favorite_activity}!")
 
 
 # ---------------------------------------------------------------------
@@ -35,11 +35,11 @@ print(f"{name}")
 # using .format()
 
 # Example Input:
-# Name: Emily
-# Example Output: "Welcome, Emily! Your name in uppercase is: EMILY!"
+name = input("What is your name?")
+print(f'Welcome, {name.title()}! Your name in uppercase is: {name.upper()}')
 
 
-# ---------------------------------------------------------------------
+# --------------------------------[-------------------------------------
 # Exercise 4: User Profile Creation
 # Build a user profile generator. Ask
 # the user for their first name, last name, and age. Create
@@ -52,8 +52,12 @@ print(f"{name}")
 #
 # Example Output:
 # Name: John Smith
-# Age: 28
+# Age: 28 
 
+first_name = input("What is your first name?")
+last_name = input("What is your last name?")
+age = input("How old are you?")
+print(f'These are your statistics: {first_name.title()} {last_name.title()} {age}')
 
 # ---------------------------------------------------------------------
 # Exercise 5: Text message limits
@@ -76,7 +80,7 @@ print(f"{name}")
 # Example Output: "H*ll*, w*rld!"
 sentence = input("Enter a sentence: ")
 transformed_sentence = sentence.replace('a', '*')
-print('Transformed sentence == ' + transformed_sentence)
+print('Transformed sentence == ' + transformed_sentence.title())
 
 
 # ------------------------------# ---------------------------------------------------------------------
@@ -92,7 +96,9 @@ print('Transformed sentence == ' + transformed_sentence)
 # Age: 28
 
 name_dict = {"name": 'Lucy Smith',
-             "age":28}
+             "age": 28}
+
+print('Data for Lucy Smith is: ' + str(name_dict))
 
 # ---------------------------------------------------------------------
 # Exercise 8: Miles to Kilometers Conversion
@@ -186,6 +192,6 @@ average_speed = miles / hours
 
 # Formatting and displaying the result
 # (Your code here)
-rounded_speed = round(average_speed)
+rounded_speed = round(average_speed, 1)
 
 print(f"The average speed is {rounded_speed} miles per hour")
