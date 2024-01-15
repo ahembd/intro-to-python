@@ -9,82 +9,76 @@
 Complete the following code in such a way that this loop prints the characters 
 of `name` one at a time.
 
-```python
+
 name = "Joseph"
 
-for ??? in ???:
-    print(???)
-```
+for letter in name:
+    print(letter)
+
 
 ### Create a basic `for` loop with a counter
 
-Complete the following code in such a way that the loop increments the
-counter and prints the number of characters in `name` at the end.
+#Complete the following code in such a way that the loop increments the
+#counter and prints the number of characters in `name` at the end.
 
-```python
+
 name = 'Tom'
-counter = ???
+counter = 0
 
-for ??? in ???:
-    counter = ???
+for i in name:
+    print(i)
+    counter = counter++
 
 # This should print '3'
 print(counter)
-```
+
 
 ### Create a basic `while` loop
 
-Complete the following code in such a way that the loop exits after **five**
-iterations, _without_ using `break`
+#Complete the following code in such a way that the loop exits after **five**
+#iterations, _without_ using `break`
 
-🔥 **Hint**: Think of it as: _while counter is under 5, increment the counter and print its value_ 🔥
+#🔥 **Hint**: Think of it as: _while counter is under 5, increment the counter and print its value_ 🔥
 
-```python
-"""
-This should print:
-1
-2
-3
-4
-5
-"""
-counter = ???
+i = 1
+counter = i
+while i < 5:
+    print(name[i])
+    i++
+    
 
-while counter ???:
-    counter = ???
+while counter > 0:
     print(counter)
+    counter--
 ```
 
 ### Exit a loop using `break` 🛑
 
-Take the previous example, and modify it so you exit the loop after **five** iterations, 
-but this time do it _using_ `break`
+##Take the previous example, and modify it so you exit the loop after **five** iterations, 
+##but this time do it _using_ `break`
 
-```python
-counter = ???
+counter = len(name)
 
-while ???:
-    counter = ???
+while counter > 0
+    counter--
 
-    if ???:
-        ???
+    if count < len(name):
+        break
         
     print(counter)
-```
+
 
 ### Range
 
-Remember that `range(start, end, step)` behaves somewhat like list slicing, so `start` is inclusive,
+#Remember that `range(start, end, step)` behaves somewhat like list slicing, so `start` is inclusive,
 `end` is exclusive, and `step` is optional.
 
-Figure out the values required for `range()` to generate the expected output.
-
-```python
+#Figure out the values required for `range()` to generate the expected output.
 # 0, 1, 2, 3, 4, 5 (use only one argument)
-range(???)
+range(6)
 
 # 0, 1, 2, 3, 4, 5 (use two arguments: start and end)
-range(???)
+range(0,6)
 
 # Odd numbers between 0 and 10: 1, 3, 5, 7, 9
 range(???)
@@ -97,8 +91,9 @@ Remember that `range()` returns an _iterable_, so you will usually find it used 
 Complete the following code so it prints the _even_ numbers between 0 and 10;
 
 ```python
-for ??? in range(???):
-    print(???)
+for num in range(0,10):
+    if num%2 == 0:
+        print(num)
 ```
 
 ## Exercises 🏋🏻
@@ -118,8 +113,8 @@ If the character is a digit (`if character in numbers`) print it.
 my_string = 's0m3 str1ng w1th numb3r5'
 numbers = '1234567890'
 
-for ??? in ???:
-    if ??? in ???:
+for character in my_string:
+    if character in numbers:
         print(character)
 ```
 
@@ -135,11 +130,11 @@ number of vowels in this quote.
 quote = "Life is like riding a bicycle. To keep your balance, you MUST keep moving."
 vowel_count = 0
 
-for ??? ??? ???:
+for letter in quote:
     # 'A' and 'a' are different in python, so we include both upper and lowercase
     # vowels in our comparison string to account for this difference.
-    if ??? ??? 'aeiouAEIOU':
-        vowel_count += ???
+    if letter in 'aeiouAEIOU':
+        vowel_count = vowel_count + 1
 
 print(f"The number of vowels in the quote is: {vowel_count}")
 ```
@@ -154,11 +149,11 @@ a serial key. Your task is to find all the numbers in this string and sum them u
 ```python
 mixed_string = "abc123xyz456"
 digits = "0123456789"
-found_digits = ???
+found_digits = []
 
 for char in mixed_string:
-    if char in ???:
-        found_digits.a???(int(char))
+    if char in digits:
+        found_digits.append(int(char))
 
 print(f"The total sum of numbers in the string is: {sum(found_digits)}")
 ```
@@ -174,9 +169,9 @@ Create a Python program to check the strength of a list of passwords and count h
 passwords = ['Passw0rd', 'hello', 'strongPass1', 'weak']
 strong_password_count = 0
 
-for ??? ??? ???:
-    if ???(password) >= 8:
-        strong_password_count ??? 1
+for i in password:
+    if len(password) >= 8:
+        strong_password_count += 1
 
 print(f"Number of strong passwords: {strong_password_count}")
 
@@ -184,20 +179,19 @@ print(f"Number of strong passwords: {strong_password_count}")
 
 ###  The Red Crayon 🖍️
 
-Imagine you have a box of crayons, and you're looking for a "Red" crayon. 
-You pull out one crayon at a time from the box. 
+#Imagine you have a box of crayons, and you're #looking for a "Red" crayon. 
+#You pull out one crayon at a time from the box. 
 
-Use a `while` loop to simulate this scenario.  As soon as you find the "Red" crayon, stop the loop.
+#Use a `while` loop to simulate this scenario.  #As soon as you find the "Red" crayon, stop #the loop.
 
-```python
+
 colors = ["Blue", "Yellow", "Green", "Red", "Purple", "Orange"]
 index = 0
 
 # This should basically say: while the current color being evaluated is 
 # different than "Red", increment to the next color and try again.
-while colors[index] ??? "Red":
+while colors[index] != "Red":
     print(f"Found {colors[index]} crayon. Still looking for Red.")
-    index ??? 1
+    index += 1
 
 print("Found the Red crayon!")
-```

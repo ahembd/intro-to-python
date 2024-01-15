@@ -9,8 +9,8 @@
 #
 # Example Input: "Alice"
 # Example Output: "Hello, Alice!"
-name = input("Enter yor name: ")
-print(f"????")
+name = input("Enter your name: ")
+print(f'{name}')
 
 # ---------------------------------------------------------------------
 # Exercise 2: Greeting with User's Favorite Activity
@@ -76,6 +76,7 @@ print(f"????")
 # Example Output: "H*ll*, w*rld!"
 sentence = input("Enter a sentence: ")
 transformed_sentence = sentence.replace('a', '*')
+print(transformed_sentence)
 
 
 # ------------------------------# ---------------------------------------------------------------------
@@ -84,11 +85,11 @@ transformed_sentence = sentence.replace('a', '*')
 # Use string slicing and string methods to extract the name and the age
 # and print the result formatted.
 #
-# data = "lucy smith:28"
+data = "lucy smith:28"
 #
 # Expected output:
-# Name: Lucy Smith
-# Age: 28
+#  Name: Lucy Smith
+#  Age: 28
 
 
 # ---------------------------------------------------------------------
@@ -177,6 +178,8 @@ average_speed = miles / hours
 
 # Formatting and displaying the result
 # (Your code here)
-rounded_speed = ????
+rounded_speed = floor(average_speed)
 
-print(f"The average speed is {rounded_speed} miles per hour")
+# print(f"The average speed is {rounded_speed} miles per hour")
+
+print('Hello World')

@@ -1,9 +1,11 @@
+import math
+
 # Homework Lesson 2 - Numbers - Homework
 
 # READ CAREFULLY THE EXERCISE DESCRIPTION AND SOLVE IT RIGHT AFTER IT
 
 # ---------------------------------------------------------------------
-# Exercise 0 - This exercise is solved so you can have an ----------
+# Exercise 0 - This exercise is solved, so you can have an ----------
 # example of how we are expecting your answers to be.
 #
 # You are shopping online and found two items with prices $5.99
@@ -11,7 +13,7 @@
 item1_price = 5.99
 item2_price = 3
 total_cost = item1_price + item2_price
-print(total_cost)
+print('Total cost == ' + str(total_cost))
 
 # ---------------------------------------------------------------------
 # Exercise 1 - Travel Distance
@@ -22,18 +24,18 @@ print(total_cost)
 
 average_speed = 60
 hours_available = 4
-total_distance = ??? # calculate here
-print(???)  # print the result
+total_distance = average_speed * hours_available  # calculate here
+print('Total distance == ' + str(total_distance))  # print the result
 
 # ---------------------------------------------------------------------
 # Exercise 2 - Pizza Slices
 # A pizza is cut into 8 equal slices. Calculate and print how many
 # slices each person will get if there are 4 people sharing the pizza.
 
-pizza_slices = ???
-people = ???
-slices_per_person = ???
-print(???)
+pizza_slices = 8
+people = 4
+slices_per_person = pizza_slices / people
+print('Slices per person == ' + str(slices_per_person))
 
 # ---------------------------------------------------------------------
 # Exercise 3 - Shopping Discount
@@ -52,7 +54,7 @@ print(???)
 # You are designing a weather app and need to convert temperature
 # from Celsius to Fahrenheit for display. Convert a given
 # temperature and print the result.
-# To convert Celsis to Fahrenheit you need to multiply
+# To convert Celsius to Fahrenheit you need to multiply
 # the temperature in Celsius by 9/5 and add 32 to the result
 
 
@@ -99,11 +101,13 @@ print(???)
 #
 # For the values provided we are expecting a total earning of 750000,
 # however the code is not working correctly. Can you fix it?
-1st_event_participants = 250
-2nd_event_participants = 500
-ticket_$ = 1000
-
-total_earnings = (1st_event_total + 2nd_event_total) * ticket_$
+first_event_participants = 250
+second_event_participants = 500
+tickets = 1000
+price_per_ticket = 5
+first_event_total = first_event_participants * price_per_ticket
+second_event_total = second_event_participants * price_per_ticket
+total_earnings = (first_event_total + second_event_total) * tickets
 print(total_earnings)
 
 
@@ -130,7 +134,7 @@ student_2_age = 17
 student_3_age = 13
 
 students_age_mean = student_1_age + student_2_age + student_3_age / 3
-print(students_mean_age)
+print('Students'' mean age == ' + str(students_age_mean))
 
 # ---------------------------------------------------------------------
 # Challenge (OPTIONAL!): Separating Digits of a Number
@@ -153,6 +157,10 @@ number = 1597
 
 digit_1 = number % 10
 number = number // 10
+digit_2 = math.sqrt(number)
+digit_3 = number * number
+digit_4 = math.sqrt(digit_3)
+
 
 # print(digit_1) # will print 7
 # print(number)  # will print 159
